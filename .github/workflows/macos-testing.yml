@@ -15,6 +15,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.4
+
       - name: Install dotload
         run: curl -sL https://raw.githubusercontent.com/okineadev/dotload/main/install.sh | bash
 
