@@ -18,11 +18,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.4
 
-      - name: Install dotload
-        run: |
-          echo "$OSTYPE"
-          curl -sL https://raw.githubusercontent.com/okineadev/dotload/main/install.sh | bash
-
       # Runs a set of commands using the runners shell
       - name: Clone dotfiles
-        run: yes | dotload @okineadev
+        run: yes | /bin/bash <(curl -sL https://raw.githubusercontent.com/okineadev/dotload/main/dotload/bin/dotload) @okineadev
