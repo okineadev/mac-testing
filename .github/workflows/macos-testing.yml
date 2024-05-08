@@ -18,6 +18,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.4
 
-      # Runs a set of commands using the runners shell
-      - name: Clone dotfiles
-        run: yes | /bin/bash <(curl -sL https://raw.githubusercontent.com/okineadev/dotload/main/dotload/bin/dotload) @okineadev
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
